@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const count = (a) => {
+            var b = a.split('');
+            console.log(b);
+            var c = [... new Set(b)];
+            for (var i = 0; i < c.length; i++) {
+                var sum = 0;
+                for (var j = 0; j < b.length; j++) {
+                    if (c[i] == b[j]) {
+                        sum++;
+                    }
+                }
+                console.log(c[i] + " occured " + sum + " times");
+            }
+        }
+
+        var a = prompt("Enter string");
+        count(a);
+    </script>
+</body>
+
+</html>

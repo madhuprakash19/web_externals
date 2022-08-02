@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = prompt("Enter a number");
+        let num = new Promise(function (resolve, reject) {
+            if (a >= 20) {
+                resolve("Num is greater than or equal to 20");
+            }
+            else {
+                reject("Num is less than 20");
+            }
+        }).then((res) => {
+            console.log(res);
+        }).catch((res) => {
+            console.log(res);
+        }).finally(() => {
+            alert("Done");
+        })
+    </script>
+</body>
+
+</html>

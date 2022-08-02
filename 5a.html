@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="convert">
+    <button id="btn">Click</button>
+    <p id="final"></p>
+    <script>
+        const sort_this = () => {
+            var a = document.getElementById("convert").value;
+            var b = a.split("");
+            b.sort();
+            var c = b.join('');
+            document.getElementById("final").innerHTML = c;
+        }
+        document.getElementById('btn').addEventListener("click", sort_this);
+
+    </script>
+</body>
+
+</html>
