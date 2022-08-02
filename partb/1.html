@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let o = {};
+        let m = new Map();
+        let a = ['madhu', 'laisha', 'nikitha', 'mohith', 'mokshith', 'rachana'];
+
+
+
+        console.log("Time taken to insert into object");
+        console.time('o1');
+        for (var i = 0; i < a.length; i++) {
+            o[a[i]] = i;
+        }
+        console.timeEnd('o1');
+        console.log("Time taken to insert into map");
+        console.time('m1');
+        for (var i = 0; i < a.length; i++) {
+            m.set(i, a[i]);
+        }
+        console.timeEnd('m1');
+        console.log(o);
+        console.log(m);
+
+        console.log("Time taken to delete in object");
+        console.time('o2');
+        delete o.madhu;
+        delete o.laisha;
+        delete o.nikitha;
+        delete o.mohith;
+        delete o.mokshith;
+        console.timeEnd('o2');
+        console.log("Time taken to delete in map");
+        console.time('m2');
+        m.delete(0);
+        m.delete(1);
+        m.delete(2);
+        m.delete(3);
+        m.delete(4);
+        console.timeEnd('m2');
+
+        console.log(o);
+        console.log(m);
+
+
+
+    </script>
+</body>
+
+</html>

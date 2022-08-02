@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const flight = (a) => new Promise(function (resolve, reject) {
+            if (a == 'flight') {
+                resolve("Flight booked");
+            }
+            else {
+                reject("Flight not booked");
+            }
+        })
+
+        const hotel = (a) => new Promise(function (resolve, reject) {
+            if (a == 'hotel') {
+                resolve("Hotel booked");
+            }
+            else {
+                reject("Hotel not booked");
+            }
+        })
+
+        var a = prompt("Enter for flight");
+
+        flight(a).then((res) => {
+            alert(res);
+            var b = prompt("Enter for hotel");
+            hotel(b).then((res) => {
+                alert(res);
+            }).catch((res) => {
+                alert(res);
+            })
+        }).catch((res) => {
+            alert(res);
+        })
+
+    </script>
+</body>
+
+</html>
